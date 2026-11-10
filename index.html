@@ -161,7 +161,7 @@ nav.main a:hover::after{width:100%}
 .feats{display:flex;flex-wrap:wrap;gap:6px}
 .feats li{list-style:none;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:5px 10px;background:var(--paper2);color:#3a3626}
 .fl{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);font-weight:600}
-.acts{margin-top:auto;display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.acts{margin-top:auto;display:flex;flex-direction:column;padding-top:6px}
 .btn-ink{background:var(--ink);color:var(--paper)}
 .btn-ink:hover{background:var(--accent-dark)}
 .lnk{min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);border-bottom:1px solid transparent}
@@ -530,7 +530,7 @@ function cardHTML(c,big,idx){
     <div><h3 class="cname">${esc(title(c))} ${esc(unitLabel(c))}</h3><p class="caddr">${esc(c.address)} · ${esc(c.neighborhood)}</p></div>
     <div class="specs">${specs}</div>
     ${f?`<div><p class="fl">${t.feats}</p><ul class="feats" style="margin-top:8px">${f}</ul></div>`:''}
-    <div class="acts"><a class="btn btn-ink" href="${mailHref(t.mailSub(title(c)+' '+unitLabel(c)),t.mailBody(title(c)+' '+unitLabel(c),usd(c.price)))}" data-mail="${c.id}">${t.inq}</a><a class="lnk" href="${c.url}" target="_blank" rel="noopener">${t.full}</a></div>
+    <div class="acts"><a class="btn btn-ink" href="${mailHref(t.mailSub(title(c)+' '+unitLabel(c)),t.mailBody(title(c)+' '+unitLabel(c),usd(c.price)))}" data-mail="${c.id}">${t.inq}</a></div>
    </div></article>`;
 }
 
